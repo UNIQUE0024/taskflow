@@ -7,6 +7,7 @@ function calculateServiceFee(subtotal) {
 function calculateTotal(tasks) {
   const subtotal = calculateSubtotal(tasks);
   const fee = calculateServiceFee(subtotal);
+  console.log('DEBUG total', subtotal, fee);
   return subtotal + fee;
 }
 function updateBudget() {
