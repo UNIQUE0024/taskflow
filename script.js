@@ -1,5 +1,13 @@
 let tasks = [];
+let currentFilter = 'all';
 let nextId = 1;
+
+
+function getFilteredTasks() {
+  if (currentFilter === 'active') return tasks.filter(t => !t.completed);
+  if (currentFilter === 'completed') return tasks.filter(t => t.completed);
+  return tasks;
+}
 
 function addTask(text, cost) {
   tasks.push({ id: nextId++, text, cost: cost, completed: false });

@@ -33,3 +33,6 @@ button { background: var(--primary); color: #fff; border: none; padding: 10px 16
 .task-cost { margin-left: auto; font-size: 13px; color: #777; }
 .delete-btn { background: none; color: #c0392b; padding: 2px 8px; }
 footer { display: flex; justify-content: space-between; margin-top: 16px; font-size: 13px; color: #777; }
+.filters { display: flex; gap: 8px; margin-bottom: 14px; }
+.filter-btn { background: none; color: var(--text); border: 1px solid var(--border); padding: 6px 12px; font-size: 13px; }
+.filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
