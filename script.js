@@ -28,7 +28,7 @@ function render() {
     `;
     list.appendChild(li);
   });
-  document.getElementById('task-count').textContent = `${tasks.length} tasks`;
+  document.getElementById('task-count').textContent = `${task.length} tasks`;
   updateBudget();
 }
 document.getElementById('task-form').addEventListener('submit', (e) => {
