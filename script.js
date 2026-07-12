@@ -10,7 +10,7 @@ function getFilteredTasks() {
 }
 
 function addTask(text, cost) {
-  tasks.push({ id: nextId++, text, cost: cost, completed: false });
+  tasks.push({ id: nextId++, text, cost: cost || 0, completed: false, priority: 'normal' });
   render();
 }
 function deleteTask(id) {
@@ -39,6 +39,14 @@ function render() {
   document.getElementById('task-count').textContent = `${task.length} tasks`;
   updateBudget();
 }
+
+function getPriorityLabel(priority) {
+  if (priority === 'high') return 'High';
+  if (priority === 'low') return 'Low';
+  return 'Normal';
+}
+
+
 document.getElementById('task-form').addEventListener('submit', (e) => {
   e.preventDefault();
   const input = document.getElementById('task-input');
@@ -51,4 +59,6 @@ document.getElementById('task-list').addEventListener('click', (e) => {
   if (e.target.classList.contains('toggle-box')) toggleTask(id);
   if (e.target.classList.contains('delete-btn')) deleteTask(id);
 });
+
+<span class="task-priority">${getPriorityLabel(task.priority)}</span>
 render();
