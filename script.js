@@ -11,6 +11,7 @@ function getFilteredTasks() {
 
 function addTask(text, cost) {
   tasks.push({ id: nextId++, text, cost: cost, completed: false });
+  tasks.push({ id: nextId++, text, cost: cost || 0, completed: false });
   render();
 }
 function deleteTask(id) {
