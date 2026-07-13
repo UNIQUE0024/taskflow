@@ -2,7 +2,7 @@ function calculateSubtotal(tasks) {
   return tasks.reduce((sum, t) => sum + (t.cost || 0), 0);
 }
 function calculateServiceFee(subtotal) {
-  return subtotal * 0.05;
+  return subtotal * 0.5;
 }
 function calculateTotal(tasks) {
   const subtotal = calculateSubtotal(tasks);
